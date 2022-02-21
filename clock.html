@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <h1>Current Time is:<span id="time"></span></h1><br>
+        <br> <br>
+        <h2>This is my JavaScript Clock</h2>
+        <br><br><br>
+        <p>This happens to be my first project in JavaScript. I started learning it just yesterday.<br>
+        This is so much fun. It's like a <b>BRAIN</b> for my website.<br>
+    It helps to make the page dynamic</p>
+    </section>
+    <script>
+       setInterval(()=>{
+        let a = new Date();
+       thismonth=a.toLocaleDateString('default',{month:'long'});
+        document.getElementById("time").innerHTML= "   "+a.getHours()+ ":"+ a.getMinutes()+":"+
+                a.getSeconds() + "<br>On  "+ thismonth+ " "+a.getDate()+", "+a.getFullYear();
+       },1000);
+    </script>
+</body>
+</html>
